@@ -64,3 +64,32 @@ Os testes são realizados manualmente no navegador, verificando:
 - Responsividade em diferentes tamanhos de tela.
 
 O projeto ainda não possui testes automatizados.
+
+
+## Versionamento
+
+O projeto utiliza Git e GitHub para controle de versões, seguindo uma estrutura baseada em GitFlow.
+
+### Organização das branches
+
+- `main`: mantém a versão estável do projeto.
+- `develop`: concentra as alterações integradas durante o desenvolvimento.
+- `feature/`: utilizada para desenvolver funcionalidades e melhorias específicas antes da integração à `develop`.
+
+### Padrão de commits
+
+As mensagens seguem a convenção Conventional Commits, utilizando prefixos como:
+
+- `feat:` para novas funcionalidades.
+- `docs:` para alterações na documentação.
+- `fix:` para correções de problemas.
+
+### Versionamento semântico
+
+O projeto adota o formato `MAJOR.MINOR.PATCH` para identificar suas versões.
+
+A tag `v1.0.0` identifica a primeira versão funcional registrada no repositório.
+
+### Pull Requests
+
+As alterações realizadas em branches secundárias são integradas à `develop` por meio de Pull Requests, permitindo documentar, conferir e validar as modificações antes do merge.
