@@ -2,7 +2,7 @@ import { defineConfig } from 'vite';
 import { resolve } from 'node:path';
 
 export default defineConfig({
-  base: './',
+  base: '/ong-quatro-patas/',
   build: {
     outDir: 'dist',
     emptyOutDir: true,
