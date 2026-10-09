@@ -542,8 +542,8 @@ p {
 .alerta {
     grid-column: span 12;
 
-    background-color: #FFF8E1;
-    color: #5D4037;
+    background-color: var(--cor-alerta-fundo);
+    color: var(--cor-alerta-texto);
 
     border-left: 5px solid var(--cor-secundaria);
     border-radius: var(--espaco-2);
@@ -863,12 +863,63 @@ button:focus-visible {
 }
 
 .campo-invalido {
-    border: 2px solid #dc2626;
+    border: 2px solid var(--cor-erro);
 }
 
 .mensagem-erro {
     display: block;
-    color: #dc2626;
+    color: var(--cor-erro);
     font-size: 0.9rem;
     margin-top: 4px;
 }
+
+:root {
+    --cor-alerta-fundo: #FFF8E1;
+    --cor-alerta-texto: #5D4037;
+    --cor-erro: #B91C1C;
+}
+
+/* Tema escuro: variáveis reutilizadas em todas as páginas */
+:root[data-tema="escuro"] {
+    color-scheme: dark;
+    --cor-primaria: #174E2B;
+    --cor-primaria-escura: #A8E6B4;
+    --cor-secundaria: #FFD166;
+    --cor-destaque: #FFB08A;
+    --cor-fundo: #11191D;
+    --cor-superficie: #243139;
+    --cor-texto: #F4F7F8;
+    --cor-texto-secundario: #C9D6DD;
+    --cor-borda: #8B9EA8;
+    --cor-alerta-fundo: #3D3524;
+    --cor-alerta-texto: #FFF0C2;
+    --cor-erro: #FFB5B5;
+}
+
+
+/* O botão permanece visível e acessível também em telas pequenas. */
+.tema-toggle {
+    flex: 0 0 auto;
+    padding: 0.4rem 0.7rem;
+    min-width: 2.6rem;
+    min-height: 2.6rem;
+    border: 2px solid #FFFFFF;
+    border-radius: 0.6rem;
+    background: transparent;
+    color: #FFFFFF;
+    font-size: 1.3rem;
+    line-height: 1;
+    cursor: pointer;
+}
+.tema-toggle:hover { background: rgba(255,255,255,0.15); }
+.tema-toggle:focus-visible { outline: 3px solid var(--cor-secundaria); outline-offset: 3px; }
+:root[data-tema="escuro"] header,
+:root[data-tema="escuro"] footer { color: #FFFFFF; }
+:root[data-tema="escuro"] header a,
+:root[data-tema="escuro"] nav a,
+:root[data-tema="escuro"] .menu-toggle,
+:root[data-tema="escuro"] .dropdown-toggle { color: #FFFFFF; }
+:root[data-tema="escuro"] .badge { color: #1B252A; }
+:root[data-tema="escuro"] .alerta strong { color: #FFF0C2; }
+:root[data-tema="escuro"] .mensagem-erro { color: var(--cor-erro); }
+:root[data-tema="escuro"] input:focus-visible { outline: 3px solid var(--cor-secundaria); outline-offset: 2px; }

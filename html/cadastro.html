@@ -24,14 +24,21 @@
 
         <h1>ONG Quatro Patas</h1>
 
-        <button
-            class="menu-toggle"
-            type="button"
-            aria-label="Abrir menu">
-            ☰
+        
+        <button class="tema-toggle" type="button" aria-label="Ativar modo escuro" aria-pressed="false" title="Alternar modo escuro">
+            <span aria-hidden="true">☾</span>
         </button>
 
-        <nav>
+<button
+			class="menu-toggle"
+			type="button"
+			aria-label="Abrir menu"
+			aria-expanded="false"
+			aria-controls="menu-principal">
+			☰
+		</button>
+
+        <nav id="menu-principal" aria-label="Navegação principal">
 
             <ul>
 
@@ -53,13 +60,14 @@
                             class="dropdown-toggle"
                             type="button"
                             aria-label="Abrir submenu de projetos"
-                            aria-expanded="false">
+                            aria-expanded="false"
+                            aria-controls="submenu-projetos">
                             ▾
                         </button>
 
                     </div>
 
-                    <ul class="submenu">
+                    <ul class="submenu" id="submenu-projetos">
 
                         <li>
                             <a href="projetos.html#lar-temporario">
@@ -309,6 +317,7 @@
 </footer>
 
 
+<script src="../js/tema.js" defer></script>
 <script type="module" src="../js/script.js"></script>
 
 </body>
