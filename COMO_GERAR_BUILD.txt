@@ -1,0 +1,21 @@
+ONG QUATRO PATAS — BUILD DE PRODUÇÃO COM VITE
+
+1. Instale Node.js LTS, se ainda não tiver: https://nodejs.org/
+2. Abra um terminal na pasta deste projeto.
+3. Execute: npm install
+4. Execute: npm run build
+5. O Vite gera a pasta dist/ e o terminal mostra a redução real dos arquivos.
+6. Para testar o resultado, execute: npm run preview
+7. Abra o endereço informado pelo terminal e acesse /html/index.html
+
+CONFIGURAÇÃO
+- vite.config.js: três entradas HTML, base relativa e minificação de JS/CSS.
+- package.json: comandos dev, build e preview.
+- scripts/medir-build.mjs: compara bytes de HTML/CSS/JS originais e de produção.
+- Arquivos originais permanecem nas pastas html/, css/, js/ e imagens/.
+
+IMPORTANTE
+O ambiente de preparação deste ZIP não tinha acesso ao registro npm.
+Portanto, não foi possível instalar o Vite, executar a build ou medir uma redução real aqui.
+Não declare um percentual na atividade antes de rodar npm run build no seu PC.
+A comparação considera bytes sem gzip e exclui imagens.
