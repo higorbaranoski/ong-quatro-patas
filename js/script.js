@@ -1,3 +1,4 @@
+
 import {
     ativarModal,
     ativarNavegacao
@@ -180,7 +181,10 @@ const templates = {
         </section>
 
 
-        <dialog id="modal-ajuda" class="modal">
+        <dialog
+			id="modal-ajuda"
+			class="modal"
+			aria-labelledby="titulo-modal-ajuda">
 
             <div class="modal-conteudo">
 
@@ -191,7 +195,7 @@ const templates = {
                     ×
                 </button>
 
-                <h2>Como você pode ajudar?</h2>
+                <h2 id="titulo-modal-ajuda">Como você pode ajudar?</h2>
 
                 <p>
                     Faça seu cadastro para participar dos projetos
@@ -220,7 +224,7 @@ const templates = {
         </div>
 
 
-        <form action="/enviar" method="POST">
+        <form action="/enviar" method="POST" novalidate>
 
             <fieldset>
 
@@ -406,6 +410,7 @@ function renderizar(pagina) {
     ativarModal();
     ativarMascaras();
     ativarFormulario();
+    if (pagina === "cadastro") carregarCadastroSalvo();
 
 }
 
@@ -420,8 +425,3 @@ renderizar(paginaAtual);
 ativarNavegacao(renderizar);
 
 
-if (paginaAtual === "cadastro") {
-
-    carregarCadastroSalvo();
-
-}

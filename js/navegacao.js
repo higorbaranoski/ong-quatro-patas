@@ -49,9 +49,18 @@ export function ativarNavegacao(renderizar) {
 
     menuToggle.addEventListener("click", function() {
 
-        nav.classList.toggle("menu-aberto");
+    nav.classList.toggle("menu-aberto");
 
-    });
+    const aberto = nav.classList.contains("menu-aberto");
+
+    menuToggle.setAttribute("aria-expanded", String(aberto));
+
+    menuToggle.setAttribute(
+        "aria-label",
+        aberto ? "Fechar menu" : "Abrir menu"
+    );
+
+});
 
 
     const dropdownToggle =
@@ -80,8 +89,9 @@ export function ativarNavegacao(renderizar) {
 
         dropdownToggle.setAttribute(
             "aria-expanded",
-            aberto
+            String(aberto)
         );
+        dropdownToggle.setAttribute("aria-label", aberto ? "Fechar submenu de projetos" : "Abrir submenu de projetos");
 
     });
 
